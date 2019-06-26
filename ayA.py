@@ -26,7 +26,7 @@ for zone in zones:
  
     if not A_record:
 ###   @记录
-        data={'name':zone,'type':'A','content':cname_record,'proxied':True}
+        data={'name':zone,'type':'A','content':cname_record,'proxied':True}    #False不过云
 ###   www记录
 #        data={'name':'www.'+zone,'type':'A','content':cname_record,'proxied':True}
         cf.zones.dns_records.post(zone_id,data=data)
